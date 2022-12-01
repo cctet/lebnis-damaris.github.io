@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 5px;
+}
+
+body{
+    font-family: 'Sono', sans-serif;
+    font-size: 1rem;
+    min-height: 100%;
+    background-image: url('./fondoglobo.jpg');
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(122, 86, 86, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+
+h1, h2, h3, p{
+    color: rgb(54, 20, 6);
+    text-shadow: 1px 1px rgba(54, 20, 6, 0.178);
+}
+.header {
+    grid-area: header;
+    height: 380px;
+    background-image: url('./producto3.jpg');
+    background-size: 100%;
+}
+.logo{
+    height: 370px;
+    border-radius: 10px;
+}
+.uno{
+    box-shadow: -1px 1px 7px 0px black;
+    background-color: #e61f1fb4;
+    border-radius: 10px;
+    max-width: 120px;
+    padding-top: 10px;
+}
+.uno:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.dos{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    background-color:#fff461b6;
+    border-radius: 10px;
+    max-width: 120px;
+    padding-top: 10px;
+}
+.dos:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.tres{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    background-color:#1fd9e6b4;
+    border-radius: 10px;
+    max-width: 120px;
+    padding-top: 10px;
+}
+.tres:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.cuatro{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    background-color:#1fe64abd;
+    border-radius: 10px;
+    max-width: 120px;
+    padding-top: 10px;
+}
+.cuatro:hover{
+    box-shadow: -1px 1px 7px 0px rgba(165, 42, 42, 0.75);
+}
+.navbar {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-image: url('./producto1.jpg');
+}
+.imgnav{
+    width: 90px;
+}
+.imgnav:hover{
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.226);
+    border-radius: 20px;
+}
+
+.logo3{
+    width: 380px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgba(68, 184, 68, 0.603);
+    color: rgb(65, 65, 90);
+    text-shadow: 1px 1px #1fe64a;
+}
+.imgside{
+    height: 100px;
+}
+.main {
+    grid-area: main;
+    border-color: crimson (226, 111, 4);
+    background-image: url('./globos.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.t{
+    height: 150px;
+}
+.t2{
+    height: 150px;
+}
+.d{
+    height: 150px;
+}
+.d2{
+    height: 150px;
+}
+.d3{
+    height: 150px;
+}
+.imgmain{
+    padding: 10px;
+    width: 70%;
+    border-radius: 10px;
+}
+.imgmain:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    padding: 5px;
+    flex: 50%;
+}
+.imgred{
+    width: 13%;
+}
+.imgred:hover{
+    width: 12%;
+}
+.footer {
+    grid-area: footer;
+    background-color: rgba(54, 20, 6, 0.575);
+}
+.footer a{
+    color: black;
+}
+.textfooter{
+    color: rgb(68, 184, 68);
+    text-shadow: 1px 1px white;
+}
+@media (min-width:600px){
+    .grid-container{
+        grid-gap: 20px;
+        grid-template: 
+        "header  header" 380px
+        "navbar  navbar" auto
+        "sidebar main"   auto 
+        "footer  footer" 100px/
+        200px    auto;
+        overflow-y: scroll;
+    }
+    .header{
+        background-image: url('./producto3.jpg');
+        background-size: 570px;
+        background-position: center;
+    }
+}
+@media (min-width:900px){
+    .grid-container{
+        grid-template: 
+        "header  header header"  380px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  100px/
+        150px    auto    200px;
+        overflow-y: scroll;
+    }
+    .header{
+        background-image: url('./producto3.jpg');
+        background-size: 370px;
+    }
+    .navbar {
+        grid-area: navbar;
+        grid-template: 
+        "uno"       110px
+        "dos"       110px
+        "tres"      110px
+        "cuatro"    110px;
+        grid-row-gap: 20px;
+    }
+}
+.logof{
+    width: 100px;
+    height: 100px;
+
+}
+.mom{
+    width: 100px;
+    height: 100px;
+}
+.im{
+    width: 100px;
+    height: 100px;
+    
+}
